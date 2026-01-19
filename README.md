@@ -13,3 +13,5 @@
 - Foi Criado também os estilos globais pelo Styled-components - createGlobalStyle
 
 - Foi adicionado a estilização completa do header e os respectivos comentários sobre linhas específicas
+
+- Finalização do Summary/Dashboard e estilização

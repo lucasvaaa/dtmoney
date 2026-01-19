@@ -1,7 +1,5 @@
 import logoImg from '../../assets/logo.svg'
-import { Container } from './styles'
-import { Content } from './styles'
-
+import { Container,Content } from './styles'
 
 export function Header() {
     return (
