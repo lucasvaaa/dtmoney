@@ -33,3 +33,18 @@
 
 - bib para interceptações de respostas para API - Axios
     - Com foco para interceptar todas as respostas e poder alterar e deixar mais dinâmico nossa API
+
+# MODAL
+
+## Configurando modal de criação
+
+````
+yarn add react-modal
+````
+
+```
+Após Configurarmos o modal de criação (a tela que aparece em cima da aplicação) Criamos functions ao ser aberto e ao estar fechado usando UseState. Depois Componentizamos o NewTransactionModal e adicionamos props
+```
+
+
+- Instalação de Polished - functions para modificar as cores 
