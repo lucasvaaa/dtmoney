@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useEffect,useState} from "react";
-import { api } from "./services/api";
+import { createContext, ReactNode, useContext, useEffect,useState} from "react";
+import { api } from "../services/api";
 
 
 interface Transaction {
@@ -37,7 +37,7 @@ interface TransactionsContextData {
 
 
 
-export const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData); //conseguimos acessar determinadas informações a partir de qualquer local da minha aplicação | Também, quando forçamos o array ser o objeto que queremos pois o valor inicial quase nunca é usado
+const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData); //conseguimos acessar determinadas informações a partir de qualquer local da minha aplicação | Também, quando forçamos o array ser o objeto que queremos pois o valor inicial quase nunca é usado
 
 export function TransactionsProvider ({children}: TransactionsProviderProps) {
     
@@ -68,4 +68,10 @@ export function TransactionsProvider ({children}: TransactionsProviderProps) {
             {children}
         </TransactionsContext.Provider>
     )
+}
+
+
+export function useTransactions() {
+    const context = useContext(TransactionsContext)
+    return context;
 }
